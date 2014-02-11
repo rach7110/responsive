@@ -1,0 +1,91 @@
+/*Use box-sizing: border-box: Borders and padding are drawn inside the set width of your 
+content. The margin is drawn outside */
+@media screen and (max-width: 640px) {
+  .column.full,
+  .column.two-thirds,
+  .column.half,
+  .column.one-third,
+  .column.one-fourth {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+div {
+	display: block;
+}
+
+section {
+	padding: 4rem 0;
+}
+
+.example {
+  border-top: none;
+  background: #ec6f66;
+  color: #fff;
+}
+
+.grid {
+	text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 90%;
+}
+
+.grid .container {
+  border: 2px dashed rgba(255,255,255,0.3);
+  padding: 2em;
+}
+
+.grid .column {
+	border: 2px solid #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background: rgba(225,255,255,0.1);
+	padding: 1.5em;
+}
+
+/*A column is a class used for stacking content horizontally. */
+.column {
+  float: left;
+  margin-left: 5%;
+}
+
+/*The first margin is removed using the pseudo-class first-child*/
+.column:first-child {
+  margin-left: 0;
+}
+
+.column.full {
+  width: 100%;
+}
+  
+.column.two-thirds {
+  width: 65%;
+}
+  
+.column.half {
+  width: 47.5%;
+}
+ 
+.column.one-third {
+  width: 30%;
+}
+
+.row {
+  overflow: hidden;
+  margin-top: 1.5em;
+}
+
+.row:first-child {
+	margin-top: 0; 
+}
